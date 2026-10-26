@@ -1,0 +1,8 @@
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.11
+matplotlib>=3.7
+seaborn>=0.12
+scikit-posthocs>=0.7   # opzionale: altrimenti Nemenyi con implementazione scipy
+# pyswip>=0.2.10      # opzionale (spesso non si installa su Windows): non serve, Prolog e' usato via sottoprocesso con swipl nel PATH

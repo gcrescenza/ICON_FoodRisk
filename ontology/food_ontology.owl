@@ -1,0 +1,766 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:foodrisk="http://foodrisk.org/ontology/food#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://foodrisk.org/ontology/food" />
+  <owl:AnnotationProperty rdf:about="http://foodrisk.org/ontology/food#lowBelow" />
+  <owl:AnnotationProperty rdf:about="http://foodrisk.org/ontology/food#highFrom" />
+  <owl:AnnotationProperty rdf:about="http://foodrisk.org/ontology/food#rawFeature" />
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Nutrient" />
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#HealthCondition" />
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#IngredientCategory" />
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#RiskLevel" />
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#MealType" />
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Macronutrient">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Nutrient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Micronutrient">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Nutrient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Carbohydrate">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Macronutrient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Protein">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Macronutrient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Fat">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Macronutrient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#SaturatedFat">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Fat" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#UnsaturatedFat">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Fat" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Fiber">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Carbohydrate" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Sugar">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Carbohydrate" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Sodium">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Micronutrient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Potassium">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Micronutrient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#ProcessedIngredient">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#IngredientCategory" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#WholeFoodIngredient">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#IngredientCategory" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#HighSodiumIngredient">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#ProcessedIngredient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#HighSugarIngredient">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#ProcessedIngredient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#HighFiberIngredient">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#WholeFoodIngredient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#LeanProteinIngredient">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#WholeFoodIngredient" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Diabetes">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#HealthCondition" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Hypertension">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#HealthCondition" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#AthleticPerformance">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#HealthCondition" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#GeneralWellness">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#HealthCondition" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#MetabolicRisk">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#HealthCondition" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#LowRisk">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#RiskLevel" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#ModerateRisk">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#RiskLevel" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#HighRisk">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#RiskLevel" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Breakfast">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#MealType" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Lunch">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#MealType" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Dinner">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#MealType" />
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#Snack">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#MealType" />
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://foodrisk.org/ontology/food#containsNutrient">
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://foodrisk.org/ontology/food#Nutrient" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://foodrisk.org/ontology/food#hasIngredientCategory">
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://foodrisk.org/ontology/food#IngredientCategory" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://foodrisk.org/ontology/food#hasMealType">
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://foodrisk.org/ontology/food#MealType" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://foodrisk.org/ontology/food#suitableFor">
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://foodrisk.org/ontology/food#HealthCondition" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://foodrisk.org/ontology/food#contraindicatedFor">
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://foodrisk.org/ontology/food#HealthCondition" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://foodrisk.org/ontology/food#hasRiskLevel">
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://foodrisk.org/ontology/food#RiskLevel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://foodrisk.org/ontology/food#requiresLowLevelOf">
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#HealthCondition" />
+    <rdfs:range rdf:resource="http://foodrisk.org/ontology/food#Nutrient" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://foodrisk.org/ontology/food#requiresHighLevelOf">
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#HealthCondition" />
+    <rdfs:range rdf:resource="http://foodrisk.org/ontology/food#Nutrient" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://foodrisk.org/ontology/food#hasCalories">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <foodrisk:rawFeature>calories</foodrisk:rawFeature>
+    <foodrisk:lowBelow rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.42</foodrisk:lowBelow>
+    <foodrisk:highFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</foodrisk:highFrom>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://foodrisk.org/ontology/food#hasSodium">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <foodrisk:rawFeature>sodium_mg</foodrisk:rawFeature>
+    <foodrisk:lowBelow rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</foodrisk:lowBelow>
+    <foodrisk:highFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.55</foodrisk:highFrom>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://foodrisk.org/ontology/food#hasSugar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <foodrisk:rawFeature>sugar_g</foodrisk:rawFeature>
+    <foodrisk:lowBelow rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.28</foodrisk:lowBelow>
+    <foodrisk:highFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</foodrisk:highFrom>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://foodrisk.org/ontology/food#hasSaturatedFat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <foodrisk:rawFeature>saturated_fat_g</foodrisk:rawFeature>
+    <foodrisk:lowBelow rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</foodrisk:lowBelow>
+    <foodrisk:highFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.55</foodrisk:highFrom>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://foodrisk.org/ontology/food#hasFiber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <foodrisk:rawFeature>fiber_g</foodrisk:rawFeature>
+    <foodrisk:lowBelow rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.38</foodrisk:lowBelow>
+    <foodrisk:highFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.58</foodrisk:highFrom>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://foodrisk.org/ontology/food#hasProtein">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <foodrisk:rawFeature>protein_g</foodrisk:rawFeature>
+    <foodrisk:lowBelow rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.42</foodrisk:lowBelow>
+    <foodrisk:highFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.65</foodrisk:highFrom>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://foodrisk.org/ontology/food#hasGlycemicIndex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <foodrisk:rawFeature>glycemic_index</foodrisk:rawFeature>
+    <foodrisk:lowBelow rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.38</foodrisk:lowBelow>
+    <foodrisk:highFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.58</foodrisk:highFrom>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://foodrisk.org/ontology/food#hasProcessedIngredientCount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+    <foodrisk:rawFeature>n_processed_ingredients</foodrisk:rawFeature>
+    <foodrisk:lowBelow rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</foodrisk:lowBelow>
+    <foodrisk:highFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</foodrisk:highFrom>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://foodrisk.org/ontology/food#hasPotassium">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:domain rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <foodrisk:rawFeature>potassium_mg</foodrisk:rawFeature>
+    <foodrisk:lowBelow rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.42</foodrisk:lowBelow>
+    <foodrisk:highFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</foodrisk:highFrom>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_diabetes_compatible">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasGlycemicIndex" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.38</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSugar" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.28</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasFiber" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.58</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_diabetes_risk">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasGlycemicIndex" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.58</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSugar" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_hypertension_compatible">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSodium" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasPotassium" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.42</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_hypertension_risk">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSodium" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.55</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasPotassium" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.42</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_athletic_compatible">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasProtein" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.65</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSaturatedFat" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasCalories" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_metabolic_risk">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSaturatedFat" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.55</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSodium" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.55</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSugar" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_ultra_processed_heavy">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasProcessedIngredientCount" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSaturatedFat" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_balanced_macros">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSugar" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSaturatedFat" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.55</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSodium" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.55</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasProtein" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.42</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_low_glycemic_load">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasGlycemicIndex" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.58</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasFiber" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.38</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_heart_healthy">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSaturatedFat" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasSodium" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.55</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasPotassium" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.42</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_high_density_protein">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasProtein" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.65</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasCalories" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://foodrisk.org/ontology/food#bk_whole_food_profile">
+    <rdfs:subClassOf rdf:resource="http://foodrisk.org/ontology/food#Meal" />
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://foodrisk.org/ontology/food#Meal" />
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasProcessedIngredientCount" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:maxExclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://foodrisk.org/ontology/food#hasFiber" />
+            <owl:someValuesFrom>
+              <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description>
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.38</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#sugar_constraint">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Sugar" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#carb_constraint">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Carbohydrate" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#fiber_constraint">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Fiber" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#sodium_constraint">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Sodium" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#potassium_constraint">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Potassium" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#protein_constraint">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Protein" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#satfat_constraint">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#SaturatedFat" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#satfat_constraint2">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#SaturatedFat" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#sodium_constraint2">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Sodium" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#sugar_constraint2">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Sugar" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#diabetes_profile">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Diabetes" />
+    <foodrisk:requiresLowLevelOf rdf:resource="http://foodrisk.org/ontology/food#sugar_constraint" />
+    <foodrisk:requiresLowLevelOf rdf:resource="http://foodrisk.org/ontology/food#carb_constraint" />
+    <foodrisk:requiresHighLevelOf rdf:resource="http://foodrisk.org/ontology/food#fiber_constraint" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#hypertension_profile">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#Hypertension" />
+    <foodrisk:requiresLowLevelOf rdf:resource="http://foodrisk.org/ontology/food#sodium_constraint" />
+    <foodrisk:requiresHighLevelOf rdf:resource="http://foodrisk.org/ontology/food#potassium_constraint" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#athletic_profile">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#AthleticPerformance" />
+    <foodrisk:requiresHighLevelOf rdf:resource="http://foodrisk.org/ontology/food#protein_constraint" />
+    <foodrisk:requiresLowLevelOf rdf:resource="http://foodrisk.org/ontology/food#satfat_constraint" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://foodrisk.org/ontology/food#metabolic_risk_profile">
+    <rdf:type rdf:resource="http://foodrisk.org/ontology/food#MetabolicRisk" />
+    <foodrisk:requiresLowLevelOf rdf:resource="http://foodrisk.org/ontology/food#satfat_constraint2" />
+    <foodrisk:requiresLowLevelOf rdf:resource="http://foodrisk.org/ontology/food#sodium_constraint2" />
+    <foodrisk:requiresLowLevelOf rdf:resource="http://foodrisk.org/ontology/food#sugar_constraint2" />
+  </owl:NamedIndividual>
+</rdf:RDF>
