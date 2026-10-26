@@ -155,7 +155,7 @@ Test di Friedman su 12 modelli: χ²=94.92, p=1.8×10⁻¹⁵ → differenze sig
 
 ## Documentazione e verifiche
 
-- [`docs/relazione.md`](docs/relazione.md) (e versione Word `docs/FOODRISK_Finale_aggiornata.docx`): documentazione tecnica completa.
+- [`docs/relazione.md`](docs/relazione.md) (e versione Word `docs/FOODRISK.docx`): documentazione tecnica completa.
 - `python main.py` verifica a ogni avvio che `kb/food_kb.pl`, il riferimento Python e le soglie dell'ontologia coincidano (soglie, pesi, priorità, `compatible/2`).
 - `python robustness_check.py` → `results/independent_check.csv`: 5 dataset nuovi dello stesso generatore e 5 con rumore ×1.3.
 - `results/selected_hyperparameters.csv`: iperparametri scelti dalla CV in ogni run.
