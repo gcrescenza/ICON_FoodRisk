@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Prolog
+*.pl~
+*.swp
+*.swo
+
+# IDE e Sistemi Operativi
+.vscode/
+.idea/
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# Dataset temporanei (Rimuovi il # se vuoi ignorare questi file per Weka)
+# *.csv
+# *.arff
