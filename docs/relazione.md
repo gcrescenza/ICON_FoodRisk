@@ -4,7 +4,7 @@
 
 **Progetto di Ingegneria della Conoscenza** — A.A. 2025/2026
 Università degli Studi di Bari Aldo Moro
-Autore: Giorgio Crescenza — matricola 698991 — g.crescenza2@studenti.uniba.it
+Autore: Giorgio Crescenza — matricola 698991 — g.crescenza2@studenti.uniba.it - https://github.com/gcrescenza/ICON_FoodRisk
 
 ## Indice
 
